@@ -1,0 +1,49 @@
+<!--pages/songDetail/songDetail.wxml-->
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetailContainer" >
+<image class="bg-img" src="{{song.al.picUrl}}"></image>
+<view style="color: white; font-size: small;">{{song.ar[0].name}}</view>
+<view class="circle"></view>
+
+<!-- 摇杆 -->
+<image bindtap="clickNeedle" class="needle {{isPlay && 'needleRotate'}}" src="/static/image/song/needle.png"></image>
+<!-- 磁盘 -->
+<view class="discContainer {{isPlay && 'discAnimation'}}">
+  <image class="disc" src="/static/image/song/disc.png"></image>
+  <!-- 歌曲封面图 -->
+  <image class="musicImg" src="{{song.al.picUrl}}"></image>
+</view>
+<!-- 歌词 -->
+<view class="scrollLrc">
+  <text class="Lyric">{{currentLyric}}</text>
+  
+</view>
+<!-- 进度条控制 -->
+<view class="scrollLrc">
+    <text>{{currentLyric}}</text>
+  </view>
+  <!-- 进度条控制 -->
+  <view class="progressControl">
+    <text class="time">{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="audio-currentTime-Bar" style="width: {{ currentWidth  + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text class="time">{{durationTime}}</text>
+  </view>
+
+<!-- 歌曲播放控制 -->
+<view class="musicControl">
+  <text class="iconfont icon-random"></text>
+  <text class="iconfont icon-diyigeshipin" id="pre" bindtap="handleSwitch"></text>
+  <text class="iconfont {{isPlay ? 'icon-iconstop' : 'icon-kaishi1'}} big" bindtap="handleMusicPlay"></text>
+  <text class="iconfont icon-zuihouyigeshipin" id="next" bindtap="handleSwitch"></text>
+  <text class="iconfont icon-liebiao"></text>
+</view>
+
+</view>
+

@@ -1,0 +1,87 @@
+/* pages/recommandSong/recommandSong.wxss */
+.header{
+  position: relative;
+  width: 100%;
+  height: 350rpx;
+}
+.header image{
+  width: 100%;
+  height: 100%;
+}
+.header .date{
+  width: 300rpx;
+  height: 100rpx;
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  position:absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+
+}
+.ListContainer{
+  position: relative;
+  top: -20rpx;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+  width: 100%;
+  background: white;
+}
+.ListContainer .listHeader{
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height:50rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+}
+.ListContainer .listHeader image{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.listScroll .scrollItem{
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+
+
+}
+
+.listScroll .scrollItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.musicInfo text{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size:30rpx;
+  max-width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.musicInfo text:last-child{
+  font-size:25rpx;
+}
+
+.scrollItem .iconfont{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  right: 0;
+  text-align: right;
+
+}

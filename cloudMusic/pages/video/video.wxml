@@ -1,0 +1,46 @@
+<!--pages/video/video.wxml-->
+<view class="videoContainer">
+  <view class="header">
+    <image src="/static/image/video_left.png"></image>
+    <view class="search" bindtap="toSearchPage">大家都在听 梁博</view>
+    <image src="/static/image/logo.png" ></image>
+  </view>
+
+  <!-- 导航区域 -->
+  <scroll-view 
+    scroll-into-view="{{'scroll'+ navId}}"  scroll-with-animation
+   class="navScroll" enable-flex="true" scroll-x="true" style="width: 100%" >
+       <view id="{{'scroll'+item.id}}" class="navItem" wx:for="{{tabData}}" wx:key="id">
+          <view class="navContent {{item.id === navId ? 'active' : ''}} " bindtap="changeNav" id="{{item.id}}">
+            {{item.name}}
+          </view>
+       </view>
+  
+      
+    </scroll-view>
+
+
+    <scroll-view class="videoScroll" 
+    enable-flex="true" scroll-y  
+    style="width: 100%; height: calc(100vh - 160rpx);" 
+    refresher-enabled
+    bindrefresherrefresh="handleRefresh"
+    refresher-triggered="{{isTriggered}}"
+    bindscrolltolower='handleToLower'
+     >
+       <view class="videoItem" wx:for="{{videoList}}" wx:key="item">
+          <video wx:if='{{videoId === item.data.vid }}'class="common"  src="{{item.data.urlInfo.url}}" 	show-center-play-btn='{{false}}' id="{{item.data.vid}}" 	bindplay='handleVideo' object-fit="cover" bindtimeupdate="videoTimeHandle" bindended="handleVideoEnd" ></video>
+          <image wx:else class="common"  src="{{item.data.coverUrl}}" id="{{item.data.vid}}" bindtap="handleVideo"></image>
+          <text class="title">{{item.data.title}}</text>
+           <view class="userInfo">
+            <image src="{{item.data.creator.avatarUrl}}"></image>
+             <text>{{item.data.creator.nickname}}</text>
+           </view>
+       
+       </view>
+  
+      
+    </scroll-view>
+
+
+</view>

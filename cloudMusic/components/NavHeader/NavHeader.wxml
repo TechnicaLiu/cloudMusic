@@ -1,0 +1,6 @@
+<!--components/NavHeader/NavHeader.wxml-->
+
+<view class="head">
+      <text class="title">{{title}}</text>
+      <text class="more">{{rightFont}}</text>
+</view>

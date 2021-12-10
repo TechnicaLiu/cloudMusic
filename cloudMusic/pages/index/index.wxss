@@ -1,0 +1,130 @@
+page{
+  background-color: #f5f5f5;
+}
+.swiper{
+  width: 100%;
+  height: 350rpx;
+}
+
+.swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.navContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.navContainer .navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+ 
+}
+
+.navItem .iconfont{
+  color: white;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #ee4036;
+  font-size: 50rpx; 
+  margin: 20rpx 0;
+}
+
+.navItem text{
+  font-size: 26rpx;
+}
+
+.recommandContainer{
+  border-radius: 10px;
+  margin-top: 1px;
+  padding: 20rpx 20rpx;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+
+.recommendScroll{
+  display: flex;
+  margin-top: 10rpx;
+  height: 310rpx ;
+
+}
+.recommendScroll .scrollItem{
+  width: 200rpx ;
+  margin-right: 15rpx;
+ 
+  
+}
+.recommendScroll .scrollItem image{
+  width: 100px;
+  height: 100px;
+  border-radius: 15rpx;
+}
+.scrollItem  text{
+  font-size: 26rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  
+}
+
+.TopList{
+  padding: 20rpx 20rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin-bottom: 10px;
+}
+
+.topListSwiper{
+ 
+  height: 200px;
+
+}
+.topListSwiper  swiper-item{
+  width: 96%;
+  
+ 
+}
+.topListSwiper  .title{
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #333;
+}
+
+.topListSwiper .musicItem{
+  display: flex;
+
+  margin: 10px 0 ;
+
+}
+.topListSwiper .musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.topListSwiper  .musicItem  .count{
+  
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.topListSwiper .musicItem  text{
+  font-size: 30rpx;
+}
+.topListSwiper .musicItem  .songName{
+  height: 100rpx;
+  line-height: 100rpx;
+}
